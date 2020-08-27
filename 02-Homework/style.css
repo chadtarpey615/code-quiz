@@ -1,0 +1,66 @@
+
+.timer {
+    height: 100px;
+    width: 100px;
+    margin: 0 auto;
+    background-color: rgb(71, 255, 230);
+    border-radius: 60%;
+    position: fixed;
+    right: 10px;
+    top: 1px;
+  }
+
+  #timer {
+    width: 100%;
+    text-align: center;
+    margin-top: 40%;
+}
+
+h2 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.row  {
+    text-align: center;
+    width: 100%;
+    padding-left: 20px;
+    padding-bottom: 50px;
+}
+
+.code {
+    border-style: outset;
+}
+
+.jumbotron {
+    justify-content: center;
+    text-align: center;
+    padding-top: 100PX;
+}
+
+.container-quiz {
+    text-align: center;
+    justify-content: center;
+    padding-top: 5px;
+    padding-bottom: 20px;
+    
+}
+
+
+button {
+    background-color: #4CAF50; 
+    border: 1px solid green; 
+    color: white; 
+    padding: 10px 24px; 
+    cursor: pointer; 
+    width: 50%; 
+    display: inline-block;
+    text-align: center;
+    justify-content: center;
+    
+}
+
+ button:hover {
+    background-color: #3e8e41;
+  }
+
+  

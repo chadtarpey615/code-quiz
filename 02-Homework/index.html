@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code-Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="timer">
+            <div id="timer" value="60">60 </div>
+        </div>
+        <div class="col-sm-8" id="startCont">
+            <div class="row">
+                <h2>Are you ready to begin the JavaScript Quiz</h2>
+            </div>
+        </div>
+
+        <div class="row code">
+            <h1>Code-Quiz</h1>
+            <button id="start-quiz">Start Quiz</button>
+            <button id="high-score">High Scores</button>
+
+           <!-- <button id="stop-quiz">Stop</button> -->
+
+
+
+        </div>
+        <ul id="list">
+
+            <div class="container-quiz">
+                <p class="questions "></p>
+
+                <button id="answer1">Select</button> 
+                <button id="answer2">Select</button> 
+                <button id="answer3">Select</button> <br>
+                <button id="answer4">Select</button> 
+            </div>
+        </ul>
+    </div>
+
+
+<!--textContent from the click after questions pop out to be equal to the value of the correct answer inside of the object
+     if textContent === questions[i].answer
+     then we can say great! and give points
+     -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script src="logic.js"></script>
+</body>
+
+</html>
