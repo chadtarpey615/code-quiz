@@ -1,9 +1,11 @@
-
+body {
+    background-color: gray;
+}
 .timer {
     height: 100px;
     width: 100px;
     margin: 0 auto;
-    background-color: rgb(71, 255, 230);
+    background-color: #4CAF50;
     border-radius: 60%;
     position: fixed;
     right: 10px;
@@ -63,4 +65,13 @@ button {
     background-color: #3e8e41;
   }
 
+  #show-score {
+    color:black;
+    position: fixed;
+    font-style: oblique;
+    top: .05%;
+    right: 1%;
+
+
+  }
   

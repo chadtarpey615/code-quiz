@@ -8,12 +8,18 @@ let button1 = document.getElementById("answer1");
 let button2 = document.getElementById("answer2");
 let button3 = document.getElementById("answer3");
 let button4 = document.getElementById("answer4");
+let showScore = document.getElementById("show-score");
+let highScores = document.getElementById("high-score");
 
 let startingTime = 1;
 let totalSeconds = startingTime * 60;
 let interval;
 let questionsLeft = 4;
 let score = 0;
+console.log(highScores);
+
+
+
 let questions = [{
 
     question: "What is the difference between const and let in JavaScript",
@@ -39,8 +45,10 @@ let questions = [{
 
 button1.setAttribute("style", "display: none");
 button2.setAttribute("style", "display: none");
-button2.setAttribute("style", "display: none");
+button3.setAttribute("style", "display: none");
 button4.setAttribute("style", "display: none");
+showScore.setAttribute("style", "display: none");
+
 
 
 function startQuiz(event) {
@@ -106,14 +114,36 @@ function setTimer() {
         timer.textContent = totalSeconds--;
         if (totalSeconds === 0) {
             alert("You ran out of time sorry please try again")
-        } else (questionsLeft === -1) {
+        } else if (questionsLeft === -1) {
             alert("Congrats!! You have finshed the quiz");
             clearInterval(interval);
-            score = score + totalSeconds;
+            timer.textContent = score + totalSeconds;
+            showScore.setAttribute("style", "display: inline-block");
+            saveHighScore();
             stopTimer();
         }
     }, 1000)
 };
+
+
+
+function saveHighScore() {
+    highScores = JSON.parse(localStorage.getItem("highScores"));
+
+     highScore = {
+        initials: prompt("Enter Your Initials to save your score"),
+        score: score + totalSeconds
+        //initials: userName.value
+    };
+    highScores.push(highScore);
+    
+    
+}
+function displayHighScore() {
+    highScores.innerHTML = "p" + highScore;
+    
+
+}
 
 function stopTimer() {
     clearInterval(interval);
@@ -122,12 +152,11 @@ function stopTimer() {
 
 
 startbtn.addEventListener("click", startQuiz);
-//stopbtn.addEventListener("click", stopTimer);
 button1.addEventListener("click", nextQuestion);
 button2.addEventListener("click", nextQuestion);
 button3.addEventListener("click", nextQuestion);
 button4.addEventListener("click", nextQuestion);
-
+highScores.addEventListener("click", displayHighScore)
 // function for getting wrong //
 
 // function for correct answer
