@@ -22,10 +22,35 @@
 
         <div class="row code">
             <h1>Code-Quiz</h1>
-            <button id="start-quiz">Start Quiz</button>
-            <button id="high-score">High Scores</button>
+            <form id="main-Form" method="POST">
 
-           <!-- <button id="stop-quiz">Stop</button> -->
+                <div id="scoreScreen">
+                    <p id="scorePrompt">Enter Your Name For Highscores!</p><br>
+                    <ul id="scoreList"></ul>
+
+                    <input type="text" placeholder="Enter Name" id="scoreEnter">
+                    <br>
+                    <button id="reset">Reset Game</button>
+
+
+                </div>
+
+            </form>
+            <div id="quizBody">
+                <h3>You think you know JavaScript!! <br><br>
+                    You will get 20 points for each answer correct, but if you get it incorrect you will get 0 points
+                    and lose 10 seconds.. </h3>
+
+            </div>
+
+
+
+            <div id="buttonGroup">
+                <button id="start-quiz">Start Quiz</button>
+                <button id="high-score">High Scores</button>
+
+            </div>
+
 
 
 
@@ -35,19 +60,25 @@
             <div class="container-quiz">
                 <p class="questions "></p>
 
-                <button id="answer1">Select</button> 
-                <button id="answer2">Select</button> 
+                <button id="answer1">Select</button>
+                <button id="answer2">Select</button>
                 <button id="answer3">Select</button> <br>
-                <button id="answer4">Select</button> 
+                <button id="answer4">Select</button>
+                <ul id="answer">
+
+                </ul>
+                <div id="checkAnswers">
+                    <hr>
+                    <p id="correct" style="display: none">Correct</p>
+                    <p id="incorrect" style="display: none">Incorrect</p>
+                </div>
+
+
             </div>
         </ul>
     </div>
 
 
-<!--textContent from the click after questions pop out to be equal to the value of the correct answer inside of the object
-     if textContent === questions[i].answer
-     then we can say great! and give points
-     -->
 
 
 
